@@ -1,0 +1,172 @@
+.review {
+  margin: 5rem auto;
+
+  &_title {
+    text-align: center;
+    font-size: 3rem;
+    color: #1098ad;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &_underline {
+    border-bottom: 3px solid #1098ad;
+    width: 15rem;
+    margin: 1rem auto;
+  }
+
+  &_description {
+    margin: 0 auto;
+    box-shadow: 0 6rem 11rem rgba(0, 0, 0, 0.8);
+    width: 50rem;
+    text-align: center;
+    padding: 2rem 2rem;
+
+    @include respond(TAB) {
+      margin: 10rem auto;
+      width: 40rem;
+    }
+    @include respond(PHONE) {
+      margin: 10rem auto;
+      width: 30rem;
+    }
+  }
+  &_box {
+    position: relative;
+    &_img {
+      margin-top: 2rem;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 100%;
+      border-right: 8px solid #1098ad;
+      object-fit: cover;
+      @include respond(TAB) {
+        width: 18rem;
+        height: 18rem;
+      }
+      @include respond(PHONE) {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+    &_span {
+      position: absolute;
+      top: 17%;
+      left: 33%;
+      @include respond(TAB) {
+        left: 23%;
+        top: 13%;
+        width: 4.5rem;
+      }
+      @include respond(PHONE) {
+        left: 10%;
+        top: 10%;
+        width: 4.6rem;
+      }
+
+      background-color: #1098ad;
+      padding: 1rem;
+      border-radius: 100%;
+    }
+    &_author {
+      text-align: center;
+      color: #1098ad;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      @include respond(PHONE) {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+      @include respond(TAB) {
+        font-size: 3rem;
+      }
+    }
+    &_job {
+      text-align: center;
+      color: #1098ad;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      @include respond(PHONE) {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &_info {
+      text-align: center;
+      color: #57aab7;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      @include respond(PHONE) {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+      }
+      @include respond(TAB) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      &_btn {
+        &,
+        &:link,
+        &:visited {
+          font-size: 2rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0.5rem;
+          transition: all 0.2s ease-in-out;
+          color: #1098ad;
+          border-radius: 50%;
+          @include respond(PHONE) {
+            margin-bottom: 2rem;
+            font-size: 3rem;
+          }
+          @include respond(TAB) {
+            font-size: 3.7rem;
+            margin-bottom: 3rem;
+          }
+        }
+
+        &:hover,
+        &:active {
+          background-color: #57aab7;
+          border-radius: 50%;
+          backface-visibility: hidden;
+          color: #fff;
+        }
+      }
+    }
+
+    &_random {
+      &,
+      &:link,
+      &:visited {
+        background: none;
+        border: none;
+        background-color: #1098ad;
+        color: #fff;
+        padding: 1rem;
+        transition: all 0.4s;
+        border-radius: 1.2rem;
+        @include respond(TAB) {
+          font-size: 2rem;
+        }
+      }
+      &:hover,
+      &:active {
+        background-color: #57aab7;
+        cursor: pointer;
+      }
+    }
+  }
+}
